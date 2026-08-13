@@ -1011,3 +1011,392 @@ and no cropping.
     gap:8px;
   }
 }
+/* =========================================================
+   RESEARCH PAGE
+   ========================================================= */
+
+.research-page{
+  width:min(calc(100% - 110px),1320px);
+  margin:0 auto;
+  padding:60px 0 100px;
+}
+
+
+/* INTRO */
+
+.research-intro{
+  max-width:900px;
+  margin-bottom:75px;
+}
+
+.research-heading{
+  margin:0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:clamp(4.7rem,8vw,7.5rem);
+
+  font-weight:400;
+
+  line-height:.95;
+
+  letter-spacing:-.055em;
+
+  color:var(--charcoal);
+}
+
+.research-rule{
+  width:72px;
+  height:3px;
+
+  background:var(--gold);
+
+  margin:30px 0 38px;
+}
+
+.research-description{
+  margin:0;
+
+  max-width:760px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.15rem;
+
+  line-height:1.75;
+
+  color:#4d4842;
+}
+
+
+/* =========================================================
+   SECTION TABS
+   ========================================================= */
+
+.research-tabs{
+  display:flex;
+
+  width:max-content;
+
+  max-width:100%;
+
+  margin-top:48px;
+
+  border:
+    1px
+    solid
+    #d9cfbf;
+
+  border-radius:8px;
+
+  overflow:hidden;
+
+  background:rgba(255,255,255,.18);
+}
+
+.research-tabs a{
+  display:block;
+
+  min-width:240px;
+
+  padding:16px 30px;
+
+  text-align:center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.18rem;
+
+  text-decoration:none;
+
+  color:#716b64;
+
+  border-right:
+    1px
+    solid
+    #d9cfbf;
+
+  transition:
+    background .18s ease,
+    color .18s ease;
+}
+
+.research-tabs a:last-child{
+  border-right:none;
+}
+
+.research-tabs a:hover{
+  background:#f2e8d5;
+
+  color:var(--charcoal);
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.research-section{
+  scroll-margin-top:130px;
+
+  margin-bottom:90px;
+}
+
+.section-heading{
+  margin:
+    0
+    0
+    28px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:2rem;
+
+  font-weight:400;
+
+  color:var(--charcoal);
+}
+
+
+/* =========================================================
+   INDIVIDUAL RESEARCH ROW
+   ========================================================= */
+
+.research-row{
+  display:grid;
+
+  grid-template-columns:
+    125px
+    minmax(0,1fr)
+    130px;
+
+  gap:28px;
+
+  align-items:start;
+
+  padding:
+    27px
+    0
+    29px;
+
+  border-top:
+    1px
+    solid
+    #d7cdbd;
+}
+
+.research-row:last-child{
+  border-bottom:
+    1px
+    solid
+    #d7cdbd;
+}
+
+
+/* YEAR / STATUS */
+
+.research-year{
+  padding-top:5px;
+
+  font-size:.75rem;
+
+  line-height:1.45;
+
+  text-transform:uppercase;
+
+  letter-spacing:.11em;
+
+  color:#9a6d00;
+
+  font-weight:700;
+}
+
+
+/* PAPER INFORMATION */
+
+.research-content{
+  min-width:0;
+}
+
+.research-title{
+  margin:
+    0
+    0
+    6px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.35rem;
+
+  font-weight:400;
+
+  line-height:1.38;
+
+  color:#44413d;
+}
+
+.research-authors{
+  margin:
+    0
+    0
+    4px;
+
+  font-size:.91rem;
+
+  line-height:1.55;
+
+  color:#514d48;
+}
+
+.research-meta{
+  margin:0;
+
+  font-size:.9rem;
+
+  color:#746e67;
+
+  line-height:1.55;
+}
+
+
+/* MANUSCRIPT LINK */
+
+.research-action{
+  text-align:right;
+
+  padding-top:5px;
+}
+
+.manuscript-link{
+  font-size:.72rem;
+
+  text-transform:uppercase;
+
+  letter-spacing:.13em;
+
+  text-decoration:none;
+
+  font-weight:700;
+
+  color:#9a6d00;
+
+  white-space:nowrap;
+}
+
+.manuscript-link:hover{
+  color:var(--charcoal);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:1000px){
+
+  .research-page{
+    width:min(calc(100% - 64px),1100px);
+  }
+
+  .research-row{
+    grid-template-columns:
+      110px
+      minmax(0,1fr)
+      120px;
+
+    gap:20px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:760px){
+
+  .research-page{
+    width:calc(100% - 48px);
+
+    padding:
+      44px
+      0
+      70px;
+  }
+
+  .research-heading{
+    font-size:
+      clamp(
+        3.8rem,
+        17vw,
+        5.6rem
+      );
+  }
+
+  .research-intro{
+    margin-bottom:55px;
+  }
+
+  .research-tabs{
+    width:100%;
+
+    flex-direction:column;
+  }
+
+  .research-tabs a{
+    width:100%;
+
+    min-width:0;
+
+    border-right:none;
+
+    border-bottom:
+      1px
+      solid
+      #d9cfbf;
+  }
+
+  .research-tabs a:last-child{
+    border-bottom:none;
+  }
+
+  .research-row{
+    grid-template-columns:1fr;
+
+    gap:7px;
+
+    padding:
+      23px
+      0
+      25px;
+  }
+
+  .research-year{
+    padding:0;
+
+    margin-bottom:3px;
+  }
+
+  .research-action{
+    text-align:left;
+
+    padding-top:5px;
+  }
+
+}
