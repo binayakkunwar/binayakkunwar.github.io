@@ -1976,3 +1976,363 @@ a{
   }
 
 }
+/* =========================================================
+   TEACHING PAGE
+   ========================================================= */
+
+.teaching-page{
+  width:min(
+    calc(100% - 110px),
+    1200px
+  );
+
+  margin:0 auto;
+
+  padding:
+    58px
+    0
+    100px;
+}
+
+
+/* INTRO */
+
+.teaching-intro{
+  max-width:850px;
+
+  margin-bottom:70px;
+}
+
+.teaching-eyebrow{
+  margin:
+    0
+    0
+    28px;
+
+  color:var(--gold);
+
+  font-size:.72rem;
+
+  font-weight:700;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+}
+
+.teaching-heading{
+  margin:0;
+
+  color:var(--charcoal);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      4.4rem,
+      7vw,
+      6.8rem
+    );
+
+  font-weight:400;
+
+  line-height:.95;
+
+  letter-spacing:-.045em;
+}
+
+.teaching-rule{
+  width:70px;
+  height:3px;
+
+  margin:
+    31px
+    0
+    34px;
+
+  background:var(--gold);
+}
+
+.teaching-description{
+  max-width:780px;
+
+  margin:0;
+
+  color:#514c46;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.12rem;
+
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.teaching-section{
+  margin-bottom:78px;
+}
+
+.teaching-section-title{
+  margin:
+    0
+    0
+    24px;
+
+  color:var(--charcoal);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.85rem;
+
+  font-weight:400;
+}
+
+.teaching-small-label{
+  margin:
+    0
+    0
+    5px;
+
+  color:#9a6d00;
+
+  font-size:.72rem;
+
+  font-weight:700;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   TEACHING ROW
+   ========================================================= */
+
+.teaching-row{
+  display:grid;
+
+  grid-template-columns:
+    125px
+    minmax(0,1fr)
+    175px;
+
+  gap:34px;
+
+  align-items:start;
+
+  padding:
+    27px
+    0
+    29px;
+
+  border-top:
+    1px
+    solid
+    #d7cdbd;
+}
+
+.teaching-row:last-child{
+  border-bottom:
+    1px
+    solid
+    #d7cdbd;
+}
+
+
+/* COURSE NUMBER */
+
+.teaching-course{
+  padding-top:5px;
+
+  color:#9a6d00;
+
+  font-size:.76rem;
+
+  font-weight:700;
+
+  letter-spacing:.10em;
+}
+
+
+/* CONTENT */
+
+.teaching-content{
+  min-width:0;
+}
+
+.teaching-title{
+  margin:
+    0
+    0
+    5px;
+
+  color:#47433f;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.28rem;
+
+  font-weight:400;
+
+  line-height:1.4;
+}
+
+.teaching-meta{
+  margin:
+    0
+    0
+    7px;
+
+  color:#77716a;
+
+  font-size:.88rem;
+}
+
+.teaching-detail{
+  max-width:720px;
+
+  margin:0;
+
+  color:#5d5852;
+
+  font-size:.9rem;
+
+  line-height:1.6;
+}
+
+
+/* ROLE */
+
+.teaching-role{
+  padding-top:5px;
+
+  color:#6c665f;
+
+  font-size:.71rem;
+
+  font-weight:700;
+
+  letter-spacing:.10em;
+
+  line-height:1.5;
+
+  text-align:right;
+
+  text-transform:uppercase;
+}
+
+.teaching-role.planned{
+  color:#9a6d00;
+}
+
+
+/* =========================================================
+   FALL 2026
+   ========================================================= */
+
+.teaching-future{
+  margin-top:10px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:1000px){
+
+  .teaching-page{
+    width:min(
+      calc(100% - 70px),
+      1100px
+    );
+  }
+
+  .teaching-row{
+    grid-template-columns:
+      110px
+      minmax(0,1fr)
+      150px;
+
+    gap:24px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:760px){
+
+  .teaching-page{
+    width:calc(100% - 48px);
+
+    padding:
+      42px
+      0
+      70px;
+  }
+
+  .teaching-intro{
+    margin-bottom:52px;
+  }
+
+  .teaching-heading{
+    font-size:
+      clamp(
+        3.7rem,
+        16vw,
+        5.3rem
+      );
+  }
+
+  .teaching-section{
+    margin-bottom:60px;
+  }
+
+  .teaching-row{
+    grid-template-columns:1fr;
+
+    gap:6px;
+
+    padding:
+      23px
+      0;
+  }
+
+  .teaching-course{
+    padding:0;
+
+    margin-bottom:2px;
+  }
+
+  .teaching-role{
+    padding-top:4px;
+
+    text-align:left;
+  }
+
+  .teaching-title{
+    font-size:1.18rem;
+  }
+
+}
