@@ -7,7 +7,7 @@
 
   <title>Research | Binayak Kunwar</title>
 
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 
 
@@ -15,16 +15,13 @@
 
   <div class="site">
 
-
     <!-- LEFT RAIL -->
     <aside class="rail" aria-hidden="true">
       <div class="rail-mark"></div>
     </aside>
 
 
-    <!-- MAIN SITE -->
     <div class="main">
-
 
       <!-- HEADER -->
       <header class="header">
@@ -32,7 +29,6 @@
         <a class="brand" href="/">
           Binayak Kunwar
         </a>
-
 
         <nav class="nav">
 
@@ -67,10 +63,10 @@
       <main class="research-page">
 
 
-        <!-- INTRO -->
+        <!-- PAGE INTRO -->
         <section class="research-intro">
 
-          <p class="eyebrow">
+          <p class="research-eyebrow">
             Research
           </p>
 
@@ -87,16 +83,36 @@
           </p>
 
 
-          <!-- SECTION NAVIGATION -->
-          <div class="research-tabs">
+          <!-- REAL TABS -->
+          <div class="research-tabs"
+               role="tablist"
+               aria-label="Research sections">
 
-            <a href="#publications">
+            <button
+              class="research-tab active"
+              id="publications-tab"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="publications-panel"
+              data-panel="publications-panel">
+
               Publications &amp; Thesis
-            </a>
 
-            <a href="#working-papers">
+            </button>
+
+            <button
+              class="research-tab"
+              id="working-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="working-panel"
+              data-panel="working-panel">
+
               Working Papers
-            </a>
+
+            </button>
 
           </div>
 
@@ -104,38 +120,35 @@
 
 
 
-        <!-- ======================================
+        <!-- ==================================================
              PUBLICATIONS & THESIS
-             ====================================== -->
+             ================================================== -->
 
         <section
-          class="research-section"
-          id="publications">
-
-          <h2 class="section-heading">
-            Publications &amp; Thesis
-          </h2>
-
+          class="research-panel active"
+          id="publications-panel"
+          role="tabpanel"
+          aria-labelledby="publications-tab">
 
 
           <!-- THESIS -->
-          <article class="research-row">
+          <article class="publication-row">
 
-            <div class="research-year">
+            <div class="publication-year">
               2024
             </div>
 
-            <div class="research-content">
+            <div class="publication-content">
 
-              <h3 class="research-title">
+              <h2 class="paper-title">
                 Impact of Commercial and Utility-Scale Solar Energy on Farmland Price
-              </h3>
+              </h2>
 
-              <p class="research-authors">
+              <p class="paper-authors">
                 Binayak Kunwar
               </p>
 
-              <p class="research-meta">
+              <p class="paper-venue">
                 Master's Thesis, Purdue University
               </p>
 
@@ -146,24 +159,25 @@
 
 
           <!-- PUBLICATION -->
-          <article class="research-row">
+          <article class="publication-row">
 
-            <div class="research-year">
+            <div class="publication-year">
               2024
             </div>
 
-            <div class="research-content">
+            <div class="publication-content">
 
-              <h3 class="research-title">
+              <h2 class="paper-title">
                 Resource Use Efficiency of Tomato Production
-              </h3>
+              </h2>
 
-              <p class="research-authors">
+              <p class="paper-authors">
                 Binayak Kunwar
               </p>
 
-              <p class="research-meta">
-                <em>Journal of Agricultural Science and Technology</em>, 26(5)
+              <p class="paper-venue">
+                <em>Journal of Agricultural Science and Technology</em>,
+                26(5)
               </p>
 
             </div>
@@ -173,24 +187,26 @@
 
 
           <!-- PUBLICATION -->
-          <article class="research-row">
+          <article class="publication-row">
 
-            <div class="research-year">
+            <div class="publication-year">
               2023
             </div>
 
-            <div class="research-content">
+            <div class="publication-content">
 
-              <h3 class="research-title">
-                Financial Feasibility Analysis of Sweet Orange Production in Sindhuli, Nepal
-              </h3>
+              <h2 class="paper-title">
+                Financial Feasibility Analysis of Sweet Orange Production
+                in Sindhuli, Nepal
+              </h2>
 
-              <p class="research-authors">
+              <p class="paper-authors">
                 Dhakal, Kunwar, et al.
               </p>
 
-              <p class="research-meta">
-                <em>Food &amp; Agribusiness Management</em>, 4(2), 100–103
+              <p class="paper-venue">
+                <em>Food &amp; Agribusiness Management</em>,
+                4(2), 100–103
               </p>
 
             </div>
@@ -200,23 +216,23 @@
 
 
           <!-- PUBLICATION -->
-          <article class="research-row">
+          <article class="publication-row">
 
-            <div class="research-year">
+            <div class="publication-year">
               2021
             </div>
 
-            <div class="research-content">
+            <div class="publication-content">
 
-              <h3 class="research-title">
+              <h2 class="paper-title">
                 Rhamnus purpurea Edgew. and Rhamnus virgata Roxb. Rhamnaceae
-              </h3>
+              </h2>
 
-              <p class="research-authors">
+              <p class="paper-authors">
                 Bhandari, Kunwar, et al.
               </p>
 
-              <p class="research-meta">
+              <p class="paper-venue">
                 In <em>Ethnobotany of the Himalayas</em>, Springer
               </p>
 
@@ -228,48 +244,46 @@
 
 
 
-        <!-- ======================================
+        <!-- ==================================================
              WORKING PAPERS
-             ====================================== -->
+             ================================================== -->
 
         <section
-          class="research-section"
-          id="working-papers">
-
-          <h2 class="section-heading">
-            Working Papers
-          </h2>
+          class="research-panel"
+          id="working-panel"
+          role="tabpanel"
+          aria-labelledby="working-tab"
+          hidden>
 
 
 
           <!-- IV PAPER -->
-          <article class="research-row">
+          <article class="working-row">
 
-            <div class="research-year">
-              Working Paper
-            </div>
+            <div class="working-content">
 
-            <div class="research-content">
+              <h2 class="paper-title">
+                Identification of Margin-Specific IV Elasticities in
+                Unordered Outcome Models: Evidence from Farmland
+                Conversion to Renewable Energy
+              </h2>
 
-              <h3 class="research-title">
-                Identification of Margin-Specific IV Elasticities in Unordered Outcome Models:
-                Evidence from Farmland Conversion to Renewable Energy
-              </h3>
-
-              <p class="research-authors">
+              <p class="paper-authors">
                 with Chad Fiechter and Guy Tchuente
               </p>
 
             </div>
 
-            <div class="research-action">
+            <div class="paper-action">
 
               <a
                 class="manuscript-link"
                 href="https://arxiv.org/html/2411.10600v1"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 Manuscript ↗
+
               </a>
 
             </div>
@@ -279,32 +293,30 @@
 
 
           <!-- OTC PAPER -->
-          <article class="research-row">
+          <article class="working-row">
 
-            <div class="research-year">
-              Working Paper
-            </div>
+            <div class="working-content">
 
-            <div class="research-content">
-
-              <h3 class="research-title">
+              <h2 class="paper-title">
                 Farmer Corn Marketing and Over-the-Counter Derivatives
-              </h3>
+              </h2>
 
-              <p class="research-authors">
+              <p class="paper-authors">
                 with Chad Fiechter, Mindy Mallory, and Eugene Faller
               </p>
 
             </div>
 
-            <div class="research-action">
+            <div class="paper-action">
 
               <a
                 class="manuscript-link"
                 href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5712936"
                 target="_blank"
                 rel="noopener noreferrer">
+
                 Manuscript ↗
+
               </a>
 
             </div>
@@ -313,32 +325,32 @@
 
 
 
-          <!-- SOLAR PAPER -->
-          <article class="research-row">
+          <!-- AFR R&R -->
+          <article class="working-row">
 
-            <div class="research-year">
-              R&amp;R
-            </div>
+            <div class="working-content">
 
-            <div class="research-content">
+              <h2 class="paper-title">
+                The Impact of Commercial and Utility-Scale Solar Energy
+                on High-Value Farmland
+              </h2>
 
-              <h3 class="research-title">
-                The Impact of Commercial and Utility-Scale Solar Energy on High-Value Farmland
-              </h3>
-
-              <p class="research-authors">
-                Revise &amp; Resubmit, <em>Agricultural Finance Review</em>
+              <p class="paper-authors">
+                Revise &amp; Resubmit,
+                <em>Agricultural Finance Review</em>
               </p>
 
             </div>
 
-            <div class="research-action">
+            <div class="paper-action">
 
               <a
                 class="manuscript-link"
                 href="papers/solar.pdf"
                 target="_blank">
+
                 Manuscript ↗
+
               </a>
 
             </div>
@@ -348,19 +360,15 @@
 
 
           <!-- ECONOMIC DEVELOPMENT -->
-          <article class="research-row">
+          <article class="working-row">
 
-            <div class="research-year">
-              Working Paper
-            </div>
+            <div class="working-content">
 
-            <div class="research-content">
-
-              <h3 class="research-title">
+              <h2 class="paper-title">
                 The Economic Development Premium in Farmland Markets
-              </h3>
+              </h2>
 
-              <p class="research-authors">
+              <p class="paper-authors">
                 with Chad Fiechter, Guy Tchuente, and Aaron Shew
               </p>
 
@@ -370,20 +378,16 @@
 
 
 
-          <!-- SOLAR FAILURE -->
-          <article class="research-row">
+          <!-- SOLAR FAILURES -->
+          <article class="working-row">
 
-            <div class="research-year">
-              Working Paper
-            </div>
+            <div class="working-content">
 
-            <div class="research-content">
-
-              <h3 class="research-title">
+              <h2 class="paper-title">
                 When Solar Projects Fail: Causal Evidence on Farmland Prices
-              </h3>
+              </h2>
 
-              <p class="research-authors">
+              <p class="paper-authors">
                 with Chad Fiechter and Aaron Shew
               </p>
 
@@ -394,19 +398,16 @@
 
 
           <!-- MARKET POWER -->
-          <article class="research-row">
+          <article class="working-row">
 
-            <div class="research-year">
-              Working Paper
-            </div>
+            <div class="working-content">
 
-            <div class="research-content">
+              <h2 class="paper-title">
+                Market Structure, Information, and Market Power
+                in Farmland Transactions
+              </h2>
 
-              <h3 class="research-title">
-                Market Structure, Information, and Market Power in Farmland Transactions
-              </h3>
-
-              <p class="research-authors">
+              <p class="paper-authors">
                 with Chad Fiechter and Timothy Cason
               </p>
 
@@ -417,19 +418,16 @@
 
 
           <!-- ESG -->
-          <article class="research-row">
+          <article class="working-row">
 
-            <div class="research-year">
-              Working Paper
-            </div>
+            <div class="working-content">
 
-            <div class="research-content">
+              <h2 class="paper-title">
+                The Impact of ESG Practices on Financial Performance
+                in Agribusiness
+              </h2>
 
-              <h3 class="research-title">
-                The Impact of ESG Practices on Financial Performance in Agribusiness
-              </h3>
-
-              <p class="research-authors">
+              <p class="paper-authors">
                 with Chad Fiechter
               </p>
 
@@ -439,21 +437,17 @@
 
 
 
-          <!-- FARM INCOME ELASTICITY -->
-          <article class="research-row">
+          <!-- FARM INCOME -->
+          <article class="working-row">
 
-            <div class="research-year">
-              Working Paper
-            </div>
+            <div class="working-content">
 
-            <div class="research-content">
+              <h2 class="paper-title">
+                Farm Income Elasticity of Land-Use Change in the
+                United States: Evidence from the Intensive Margin
+              </h2>
 
-              <h3 class="research-title">
-                Farm Income Elasticity of Land-Use Change in the United States:
-                Evidence from the Intensive Margin
-              </h3>
-
-              <p class="research-authors">
+              <p class="paper-authors">
                 with Chad Fiechter and Guy Tchuente
               </p>
 
@@ -463,21 +457,17 @@
 
 
 
-          <!-- ML PAPER -->
-          <article class="research-row">
+          <!-- ML -->
+          <article class="working-row">
 
-            <div class="research-year">
-              Working Paper
-            </div>
+            <div class="working-content">
 
-            <div class="research-content">
-
-              <h3 class="research-title">
+              <h2 class="paper-title">
                 Farmland Price Prediction Using Machine Learning Approaches:
                 A Comparative Analysis of Regression and Ensemble Models
-              </h3>
+              </h2>
 
-              <p class="research-authors">
+              <p class="paper-authors">
                 Independent research
               </p>
 
@@ -487,29 +477,25 @@
 
 
 
-          <!-- BOOMS & BUSTS -->
-          <article class="research-row">
+          <!-- BOOMS AND BUSTS -->
+          <article class="working-row">
 
-            <div class="research-year">
-              Working Paper
-            </div>
+            <div class="working-content">
 
-            <div class="research-content">
-
-              <h3 class="research-title">
+              <h2 class="paper-title">
                 Determinants of Booms and Busts in the U.S. Farmland Market
-              </h3>
+              </h2>
 
-              <p class="research-authors">
+              <p class="paper-authors">
                 Independent research
               </p>
 
             </div>
 
           </article>
+
 
         </section>
-
 
       </main>
 
@@ -532,6 +518,43 @@
     </div>
 
   </div>
+
+
+
+  <!-- TAB SCRIPT -->
+  <script>
+
+    const tabs = document.querySelectorAll(".research-tab");
+    const panels = document.querySelectorAll(".research-panel");
+
+    tabs.forEach(tab => {
+
+      tab.addEventListener("click", () => {
+
+        tabs.forEach(item => {
+          item.classList.remove("active");
+          item.setAttribute("aria-selected", "false");
+        });
+
+        panels.forEach(panel => {
+          panel.classList.remove("active");
+          panel.hidden = true;
+        });
+
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+
+        const selectedPanel =
+          document.getElementById(tab.dataset.panel);
+
+        selectedPanel.hidden = false;
+        selectedPanel.classList.add("active");
+
+      });
+
+    });
+
+  </script>
 
 </body>
 
