@@ -1505,3 +1505,445 @@ a{
   }
 
 }
+/* =========================================================
+   OUTREACH PAGE
+   ========================================================= */
+
+.outreach-page{
+  width:min(
+    calc(100% - 110px),
+    1200px
+  );
+
+  margin:0 auto;
+
+  padding:
+    58px
+    0
+    100px;
+}
+
+
+/* INTRO */
+
+.outreach-intro{
+  margin-bottom:66px;
+}
+
+.outreach-eyebrow{
+  margin:
+    0
+    0
+    28px;
+
+  color:var(--gold);
+
+  font-size:.72rem;
+
+  font-weight:700;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+}
+
+.outreach-heading{
+  margin:0;
+
+  color:var(--charcoal);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      4.4rem,
+      7vw,
+      6.8rem
+    );
+
+  font-weight:400;
+
+  line-height:.95;
+
+  letter-spacing:-.045em;
+}
+
+.outreach-rule{
+  width:70px;
+  height:3px;
+
+  margin:
+    31px
+    0
+    34px;
+
+  background:var(--gold);
+}
+
+.outreach-description{
+  max-width:780px;
+
+  margin:0;
+
+  color:#514c46;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.12rem;
+
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   OUTREACH TABS
+   ========================================================= */
+
+.outreach-tabs{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  width:min(820px,100%);
+
+  margin-top:48px;
+
+  overflow:hidden;
+
+  background:
+    rgba(255,255,255,.16);
+
+  border:
+    1px
+    solid
+    #d5c9b7;
+
+  border-radius:7px;
+}
+
+.outreach-tab{
+  appearance:none;
+  -webkit-appearance:none;
+
+  margin:0;
+
+  padding:
+    17px
+    30px;
+
+  background:transparent;
+
+  border:0;
+
+  border-right:
+    1px
+    solid
+    #d5c9b7;
+
+  color:#77716a;
+
+  cursor:pointer;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.12rem;
+
+  line-height:1.25;
+
+  transition:
+    background .18s ease,
+    color .18s ease;
+}
+
+.outreach-tab:last-child{
+  border-right:0;
+}
+
+.outreach-tab:hover{
+  color:var(--charcoal);
+
+  background:#f4ecdd;
+}
+
+.outreach-tab.active{
+  color:#8c6300;
+
+  background:#eee2c9;
+}
+
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.outreach-panel{
+  border-top:
+    1px
+    solid
+    #d7cdbd;
+}
+
+.outreach-panel[hidden]{
+  display:none;
+}
+
+
+/* =========================================================
+   ARTICLE / MEDIA ROWS
+   ========================================================= */
+
+.outreach-row,
+.media-row{
+  display:grid;
+
+  grid-template-columns:
+    105px
+    minmax(0,1fr)
+    140px;
+
+  gap:34px;
+
+  align-items:start;
+
+  padding:
+    28px
+    0
+    30px;
+
+  border-bottom:
+    1px
+    solid
+    #d7cdbd;
+}
+
+
+/* PRESENTATIONS HAVE NO ACTION COLUMN */
+
+.presentation-row{
+  display:grid;
+
+  grid-template-columns:
+    105px
+    minmax(0,1fr);
+
+  gap:34px;
+
+  align-items:start;
+
+  padding:
+    28px
+    0
+    30px;
+
+  border-bottom:
+    1px
+    solid
+    #d7cdbd;
+}
+
+
+/* YEAR */
+
+.outreach-year{
+  padding-top:5px;
+
+  color:#9a6d00;
+
+  font-size:.75rem;
+
+  font-weight:700;
+
+  letter-spacing:.12em;
+}
+
+
+/* TEXT */
+
+.outreach-content{
+  min-width:0;
+}
+
+.outreach-title{
+  margin:
+    0
+    0
+    7px;
+
+  color:#47433f;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.28rem;
+
+  font-weight:400;
+
+  line-height:1.4;
+}
+
+.outreach-meta{
+  margin:0;
+
+  color:#77716a;
+
+  font-size:.9rem;
+
+  line-height:1.55;
+}
+
+
+/* =========================================================
+   ACTION LINKS
+   ========================================================= */
+
+.outreach-action{
+  padding-top:5px;
+
+  text-align:right;
+}
+
+.media-actions{
+  padding-top:5px;
+
+  display:flex;
+
+  justify-content:flex-end;
+
+  gap:18px;
+}
+
+.outreach-link{
+  display:inline-block;
+
+  color:#9a6d00;
+
+  font-size:.71rem;
+
+  font-weight:700;
+
+  letter-spacing:.13em;
+
+  text-decoration:none;
+
+  text-transform:uppercase;
+
+  white-space:nowrap;
+
+  transition:color .18s ease;
+}
+
+.outreach-link:hover{
+  color:var(--charcoal);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:1000px){
+
+  .outreach-page{
+    width:min(
+      calc(100% - 70px),
+      1100px
+    );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:760px){
+
+  .outreach-page{
+    width:calc(100% - 48px);
+
+    padding:
+      42px
+      0
+      70px;
+  }
+
+  .outreach-intro{
+    margin-bottom:48px;
+  }
+
+  .outreach-heading{
+    font-size:
+      clamp(
+        3.7rem,
+        16vw,
+        5.3rem
+      );
+  }
+
+  .outreach-tabs{
+    width:100%;
+
+    grid-template-columns:1fr;
+  }
+
+  .outreach-tab{
+    border-right:0;
+
+    border-bottom:
+      1px
+      solid
+      #d5c9b7;
+  }
+
+  .outreach-tab:last-child{
+    border-bottom:0;
+  }
+
+  .outreach-row,
+  .presentation-row,
+  .media-row{
+    grid-template-columns:1fr;
+
+    gap:7px;
+
+    padding:
+      23px
+      0;
+  }
+
+  .outreach-year{
+    padding:0;
+
+    margin-bottom:2px;
+  }
+
+  .outreach-action{
+    padding-top:6px;
+
+    text-align:left;
+  }
+
+  .media-actions{
+    padding-top:6px;
+
+    justify-content:flex-start;
+  }
+
+  .outreach-title{
+    font-size:1.18rem;
+  }
+
+}
