@@ -17,9 +17,9 @@
 }
 
 
-/* =========================
+/* =========================================================
    GLOBAL
-   ========================= */
+   ========================================================= */
 
 *{
   box-sizing:border-box;
@@ -31,15 +31,19 @@ html{
 
 body{
   margin:0;
+
   background:var(--cream);
   color:var(--ink);
-  font-family:-apple-system,
-              BlinkMacSystemFont,
-              "Segoe UI",
-              Roboto,
-              Helvetica,
-              Arial,
-              sans-serif;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
   line-height:1.6;
 }
 
@@ -48,27 +52,38 @@ a{
 }
 
 
-/* =========================
-   MAIN LAYOUT
-   ========================= */
+/* =========================================================
+   MAIN SITE LAYOUT
+   ========================================================= */
 
 .site{
   min-height:100svh;
+
   display:grid;
-  grid-template-columns:72px minmax(0,1fr);
+
+  grid-template-columns:
+    72px
+    minmax(0,1fr);
+
   background:var(--cream);
 }
 
 
-/* =========================
+/* =========================================================
    LEFT RAIL
-   ========================= */
+   ========================================================= */
 
 .rail{
-  background:var(--charcoal);
   position:relative;
+
   min-height:100svh;
-  border-right:4px solid var(--gold);
+
+  background:var(--charcoal);
+
+  border-right:
+    4px
+    solid
+    var(--gold);
 }
 
 .rail::before,
@@ -78,65 +93,85 @@ a{
 
 .rail-mark{
   position:absolute;
+
   top:50%;
   left:50%;
+
   transform:translate(-50%,-50%);
 }
 
 .rail-mark::before{
   content:"BK";
-  font-family:Georgia,"Times New Roman",serif;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
   font-size:1.2rem;
+
   letter-spacing:.22em;
+
   color:var(--gold-soft);
+
   writing-mode:vertical-rl;
+
   transform:rotate(180deg);
 }
 
 
-/* =========================
+/* =========================================================
    MAIN CONTENT
-   ========================= */
+   ========================================================= */
 
 .main{
   min-width:0;
+
   display:flex;
   flex-direction:column;
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-   ========================= */
+   ========================================================= */
 
 .header{
   min-height:108px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   gap:42px;
 
   padding:
     0
     clamp(48px,5vw,86px);
-
-  border-bottom:1px solid transparent;
 }
 
 
-/* TOP-LEFT NAME */
+/* SITE NAME */
 
 .brand{
-  font-family:Georgia,"Times New Roman",serif;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
   font-size:1.9rem;
+
   font-weight:400;
+
+  letter-spacing:-.02em;
 
   text-decoration:none;
 
-  color:var(--charcoal);
-
-  letter-spacing:-.02em;
   white-space:nowrap;
+
+  color:var(--charcoal);
 }
 
 
@@ -144,22 +179,28 @@ a{
 
 .nav{
   display:flex;
-  gap:34px;
+
   align-items:center;
+
   justify-content:flex-end;
+
   flex-wrap:wrap;
+
+  gap:34px;
 }
 
 .nav a{
+  color:#595550;
+
   font-size:.79rem;
+
+  font-weight:600;
+
   letter-spacing:.14em;
+
   text-transform:uppercase;
 
   text-decoration:none;
-
-  color:#595550;
-
-  font-weight:600;
 
   transition:
     color .18s ease,
@@ -176,9 +217,9 @@ a{
 }
 
 
-/* =========================
+/* =========================================================
    HOMEPAGE HERO
-   ========================= */
+   ========================================================= */
 
 .hero{
   flex:1;
@@ -193,11 +234,10 @@ a{
 
   align-items:center;
 
-  width:
-    min(
-      calc(100% - 110px),
-      var(--page)
-    );
+  width:min(
+    calc(100% - 110px),
+    var(--page)
+  );
 
   margin:0 auto;
 
@@ -207,16 +247,15 @@ a{
     82px;
 }
 
-
-/* LEFT HERO TEXT */
-
 .hero-copy{
   max-width:720px;
-  padding-left:clamp(0px,1.5vw,24px);
+
+  padding-left:
+    clamp(0px,1.5vw,24px);
 }
 
 
-/* LARGE NAME */
+/* LARGE HOMEPAGE NAME */
 
 .hero h1{
   margin:0;
@@ -243,10 +282,11 @@ a{
 }
 
 
-/* SMALL ACCENT RULE */
+/* GOLD LINE */
 
 .rule{
   width:72px;
+
   height:3px;
 
   background:var(--gold);
@@ -258,7 +298,7 @@ a{
 }
 
 
-/* POSITION */
+/* JOB TITLE */
 
 .role{
   margin:
@@ -266,32 +306,32 @@ a{
     0
     24px;
 
+  max-width:590px;
+
   color:#5c554b;
-
-  text-transform:uppercase;
-
-  letter-spacing:.17em;
 
   font-size:.9rem;
 
-  line-height:1.45;
-
   font-weight:600;
 
-  max-width:590px;
+  line-height:1.45;
+
+  letter-spacing:.17em;
+
+  text-transform:uppercase;
 }
 
 
-/* =========================
-   SOCIAL / ICON LINKS
-   ========================= */
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
 
 .social{
   display:flex;
 
-  gap:16px;
-
   align-items:center;
+
+  gap:16px;
 
   margin-bottom:30px;
 }
@@ -303,6 +343,7 @@ a{
   display:inline-flex;
 
   align-items:center;
+
   justify-content:center;
 
   border:
@@ -316,8 +357,6 @@ a{
 
   text-decoration:none;
 
-  font-size:1rem;
-
   transition:
     background .18s ease,
     color .18s ease,
@@ -327,6 +366,7 @@ a{
 
 .social a:hover{
   background:var(--charcoal);
+
   color:#fff;
 
   border-color:var(--charcoal);
@@ -335,11 +375,17 @@ a{
 }
 
 
-/* =========================
-   BIO
-   ========================= */
+/* =========================================================
+   HOMEPAGE BIO
+   ========================================================= */
 
 .bio{
+  max-width:690px;
+
+  margin:0;
+
+  color:#49443f;
+
   font-family:
     Georgia,
     "Times New Roman",
@@ -348,12 +394,6 @@ a{
   font-size:1.18rem;
 
   line-height:1.72;
-
-  color:#49443f;
-
-  max-width:690px;
-
-  margin:0;
 }
 
 
@@ -364,17 +404,17 @@ a{
 
   margin-top:24px;
 
-  text-decoration:none;
-
   color:var(--charcoal);
 
   font-size:.79rem;
 
-  text-transform:uppercase;
+  font-weight:700;
 
   letter-spacing:.14em;
 
-  font-weight:700;
+  text-decoration:none;
+
+  text-transform:uppercase;
 
   border-bottom:
     1px
@@ -388,34 +428,27 @@ a{
 
 .more:hover{
   color:var(--gold);
+
   border-color:var(--gold);
 }
 
 
-/* =========================
-   PORTRAIT
+/* =========================================================
+   HOMEPAGE PORTRAIT
    NO CROPPING
-   ========================= */
+   ========================================================= */
 
 .portrait-wrap{
+  width:100%;
+
   align-self:center;
 
   display:flex;
 
   align-items:center;
+
   justify-content:center;
-
-  width:100%;
 }
-
-
-/*
-IMPORTANT:
-There is no fixed height,
-no aspect-ratio,
-no object-fit:cover,
-and no cropping.
-*/
 
 .portrait{
   display:block;
@@ -442,9 +475,9 @@ and no cropping.
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-   ========================= */
+   ========================================================= */
 
 .footer{
   padding:
@@ -452,28 +485,27 @@ and no cropping.
     clamp(48px,5vw,86px)
     25px;
 
-  color:#817b73;
-
-  font-size:.75rem;
-
   display:flex;
 
   justify-content:space-between;
 
   gap:24px;
+
+  color:#817b73;
+
+  font-size:.75rem;
 }
 
 
-/* =========================
-   INNER PAGES
-   ========================= */
+/* =========================================================
+   STANDARD INNER PAGES
+   ========================================================= */
 
 .inner{
-  width:
-    min(
-      calc(100% - 110px),
-      1080px
-    );
+  width:min(
+    calc(100% - 110px),
+    1080px
+  );
 
   margin:0 auto;
 
@@ -483,27 +515,31 @@ and no cropping.
     96px;
 }
 
-
-/* SMALL PAGE LABEL */
-
 .eyebrow{
-  margin:0 0 12px;
+  margin:
+    0
+    0
+    12px;
 
   color:var(--gold);
 
   font-size:.73rem;
 
-  text-transform:uppercase;
+  font-weight:700;
 
   letter-spacing:.16em;
 
-  font-weight:700;
+  text-transform:uppercase;
 }
 
-
-/* PAGE TITLE */
-
 .page-title{
+  margin:
+    0
+    0
+    20px;
+
+  color:var(--charcoal);
+
   font-family:
     Georgia,
     "Times New Roman",
@@ -518,22 +554,21 @@ and no cropping.
 
   font-weight:400;
 
-  color:var(--charcoal);
+  line-height:1;
 
   letter-spacing:-.04em;
+}
 
-  line-height:1;
+.page-lead{
+  max-width:780px;
 
   margin:
     0
     0
-    20px;
-}
+    45px;
 
+  color:#57514b;
 
-/* PAGE INTRO */
-
-.page-lead{
   font-family:
     Georgia,
     "Times New Roman",
@@ -541,90 +576,110 @@ and no cropping.
 
   font-size:1.16rem;
 
-  color:#57514b;
+  line-height:1.7;
+}
 
+
+/* =========================================================
+   PROSE
+   ========================================================= */
+
+.prose{
   max-width:780px;
+}
 
+.prose h2{
   margin:
+    40px
     0
-    0
-    45px;
-}
+    12px;
 
+  color:var(--charcoal);
 
-/* =========================
-   CARDS
-   ========================= */
-
-.cards{
-  display:grid;
-
-  grid-template-columns:
-    repeat(
-      2,
-      minmax(0,1fr)
-    );
-
-  gap:22px;
-}
-
-.card{
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      .32
-    );
-
-  border:
-    1px
-    solid
-    var(--line);
-
-  padding:
-    27px
-    28px;
-
-  min-height:160px;
-}
-
-.card h2,
-.card h3{
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
+  font-size:1.8rem;
+
   font-weight:400;
+}
 
-  color:var(--charcoal);
+.prose p{
+  color:#4f595f;
 
+  font-size:1rem;
+
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.cards{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:22px;
+}
+
+.card{
+  min-height:160px;
+
+  padding:
+    27px
+    28px;
+
+  background:
+    rgba(255,255,255,.32);
+
+  border:
+    1px
+    solid
+    var(--line);
+}
+
+.card h2,
+.card h3{
   margin:
     0
     0
     9px;
 
+  color:var(--charcoal);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
   font-size:1.5rem;
+
+  font-weight:400;
 }
 
 .card p{
-  color:var(--muted);
-
   margin:
     0
     0
     14px;
+
+  color:var(--muted);
 }
 
 .card a{
-  font-weight:700;
-
-  text-decoration:none;
-
   color:var(--charcoal);
 
   font-size:.86rem;
+
+  font-weight:700;
+
+  text-decoration:none;
 }
 
 .card a:hover{
@@ -632,9 +687,9 @@ and no cropping.
 }
 
 
-/* =========================
-   PAPERS
-   ========================= */
+/* =========================================================
+   OLD PAPER CLASSES
+   ========================================================= */
 
 .paper-list{
   border-top:
@@ -663,37 +718,37 @@ and no cropping.
 }
 
 .paper-type{
-  font-size:.72rem;
-
-  text-transform:uppercase;
-
-  letter-spacing:.1em;
+  padding-top:5px;
 
   color:#7a756e;
 
+  font-size:.72rem;
+
   font-weight:700;
 
-  padding-top:5px;
+  letter-spacing:.1em;
+
+  text-transform:uppercase;
 }
 
 .paper h2{
+  margin:
+    0
+    0
+    7px;
+
+  color:var(--charcoal);
+
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-  font-weight:400;
-
-  color:var(--charcoal);
-
   font-size:1.4rem;
 
-  line-height:1.35;
+  font-weight:400;
 
-  margin:
-    0
-    0
-    7px;
+  line-height:1.35;
 }
 
 .paper h2 a{
@@ -705,22 +760,22 @@ and no cropping.
 }
 
 .authors{
-  font-size:.9rem;
-
-  color:#72777a;
-
   margin:
     0
     0
     8px;
+
+  color:#72777a;
+
+  font-size:.9rem;
 }
 
 .summary{
-  color:#505a60;
+  max-width:760px;
 
   margin:0;
 
-  max-width:760px;
+  color:#505a60;
 
   font-size:.94rem;
 }
@@ -730,15 +785,15 @@ and no cropping.
 }
 
 .paper-links a{
+  margin-right:16px;
+
+  color:var(--charcoal);
+
   font-size:.82rem;
 
   font-weight:700;
 
   text-decoration:none;
-
-  color:var(--charcoal);
-
-  margin-right:16px;
 }
 
 .paper-links a:hover{
@@ -746,40 +801,9 @@ and no cropping.
 }
 
 
-/* =========================
-   PROSE
-   ========================= */
-
-.prose{
-  max-width:780px;
-}
-
-.prose h2{
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  color:var(--charcoal);
-
-  font-weight:400;
-
-  font-size:1.8rem;
-
-  margin:
-    40px
-    0
-    12px;
-}
-
-.prose p{
-  color:#4f595f;
-}
-
-
-/* =========================
-   LISTS
-   ========================= */
+/* =========================================================
+   CLEAN LISTS
+   ========================================================= */
 
 .clean-list{
   list-style:none;
@@ -817,17 +841,372 @@ and no cropping.
 .clean-list span{
   display:block;
 
+  margin-top:3px;
+
   color:#747b80;
 
   font-size:.9rem;
-
-  margin-top:3px;
 }
 
 
-/* =========================
+/* =========================================================
+   RESEARCH PAGE
+   ========================================================= */
+
+.research-page{
+  width:min(
+    calc(100% - 110px),
+    1200px
+  );
+
+  margin:0 auto;
+
+  padding:
+    58px
+    0
+    100px;
+}
+
+
+/* =========================================================
+   RESEARCH INTRO
+   ========================================================= */
+
+.research-intro{
+  margin-bottom:66px;
+}
+
+.research-eyebrow{
+  margin:
+    0
+    0
+    28px;
+
+  color:var(--gold);
+
+  font-size:.72rem;
+
+  font-weight:700;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+}
+
+.research-heading{
+  margin:0;
+
+  color:var(--charcoal);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      4.4rem,
+      7vw,
+      6.8rem
+    );
+
+  font-weight:400;
+
+  line-height:.95;
+
+  letter-spacing:-.045em;
+}
+
+.research-rule{
+  width:70px;
+
+  height:3px;
+
+  margin:
+    31px
+    0
+    34px;
+
+  background:var(--gold);
+}
+
+.research-description{
+  max-width:760px;
+
+  margin:0;
+
+  color:#514c46;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.12rem;
+
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   RESEARCH TABS
+   ========================================================= */
+
+.research-tabs{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(220px,1fr));
+
+  width:min(700px,100%);
+
+  margin-top:48px;
+
+  overflow:hidden;
+
+  background:
+    rgba(255,255,255,.16);
+
+  border:
+    1px
+    solid
+    #d5c9b7;
+
+  border-radius:7px;
+}
+
+.research-tab{
+  appearance:none;
+  -webkit-appearance:none;
+
+  margin:0;
+
+  padding:
+    16px
+    28px;
+
+  background:transparent;
+
+  border:0;
+
+  border-right:
+    1px
+    solid
+    #d5c9b7;
+
+  color:#77716a;
+
+  cursor:pointer;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.12rem;
+
+  font-weight:400;
+
+  line-height:1.25;
+
+  transition:
+    background .18s ease,
+    color .18s ease;
+}
+
+.research-tab:last-child{
+  border-right:0;
+}
+
+.research-tab:hover{
+  color:var(--charcoal);
+
+  background:#f4ecdd;
+}
+
+.research-tab.active{
+  color:#8c6300;
+
+  background:#eee2c9;
+}
+
+
+/* =========================================================
+   RESEARCH PANELS
+   ========================================================= */
+
+.research-panel{
+  border-top:
+    1px
+    solid
+    #d7cdbd;
+}
+
+.research-panel[hidden]{
+  display:none;
+}
+
+
+/* =========================================================
+   PUBLICATIONS & THESIS
+   ========================================================= */
+
+.publication-row{
+  display:grid;
+
+  grid-template-columns:
+    105px
+    minmax(0,1fr);
+
+  gap:34px;
+
+  align-items:start;
+
+  padding:
+    28px
+    0
+    30px;
+
+  border-bottom:
+    1px
+    solid
+    #d7cdbd;
+}
+
+.publication-year{
+  padding-top:5px;
+
+  color:#9a6d00;
+
+  font-size:.75rem;
+
+  font-weight:700;
+
+  letter-spacing:.12em;
+}
+
+.publication-content{
+  min-width:0;
+}
+
+
+/* =========================================================
+   WORKING PAPERS
+   ========================================================= */
+
+.working-row{
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    145px;
+
+  gap:40px;
+
+  align-items:start;
+
+  padding:
+    28px
+    0
+    30px;
+
+  border-bottom:
+    1px
+    solid
+    #d7cdbd;
+}
+
+.working-content{
+  min-width:0;
+}
+
+
+/* =========================================================
+   RESEARCH PAPER TYPOGRAPHY
+   ========================================================= */
+
+.paper-title{
+  margin:
+    0
+    0
+    7px;
+
+  color:#47433f;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.28rem;
+
+  font-weight:400;
+
+  line-height:1.4;
+}
+
+.paper-authors{
+  margin:
+    0
+    0
+    4px;
+
+  color:#55504a;
+
+  font-size:.9rem;
+
+  line-height:1.55;
+}
+
+.paper-venue{
+  margin:0;
+
+  color:#77716a;
+
+  font-size:.88rem;
+
+  line-height:1.55;
+}
+
+
+/* =========================================================
+   MANUSCRIPT LINK
+   ========================================================= */
+
+.paper-action{
+  padding-top:5px;
+
+  text-align:right;
+}
+
+.manuscript-link{
+  display:inline-block;
+
+  color:#9a6d00;
+
+  font-size:.71rem;
+
+  font-weight:700;
+
+  letter-spacing:.13em;
+
+  text-decoration:none;
+
+  text-transform:uppercase;
+
+  white-space:nowrap;
+
+  transition:color .18s ease;
+}
+
+.manuscript-link:hover{
+  color:var(--charcoal);
+}
+
+
+/* =========================================================
    TABLET
-   ========================= */
+   ========================================================= */
 
 @media(max-width:1000px){
 
@@ -846,11 +1225,10 @@ and no cropping.
   }
 
   .hero{
-    width:
-      min(
-        calc(100% - 64px),
-        var(--page)
-      );
+    width:min(
+      calc(100% - 64px),
+      var(--page)
+    );
 
     grid-template-columns:
       minmax(0,1fr)
@@ -879,18 +1257,25 @@ and no cropping.
   }
 
   .inner{
-    width:
-      min(
-        calc(100% - 64px),
-        1080px
-      );
+    width:min(
+      calc(100% - 64px),
+      1080px
+    );
   }
+
+  .research-page{
+    width:min(
+      calc(100% - 70px),
+      1100px
+    );
+  }
+
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-   ========================= */
+   ========================================================= */
 
 @media(max-width:760px){
 
@@ -898,11 +1283,15 @@ and no cropping.
     display:block;
   }
 
+
+  /* TOP STRIP ON MOBILE */
+
   .rail{
     height:6px;
+
     min-height:6px;
 
-    border-right:none;
+    border-right:0;
 
     border-bottom:
       3px
@@ -914,6 +1303,9 @@ and no cropping.
     display:none;
   }
 
+
+  /* HEADER */
+
   .header{
     height:auto;
 
@@ -923,12 +1315,12 @@ and no cropping.
 
     align-items:flex-start;
 
+    gap:16px;
+
     padding:
       24px
       24px
       20px;
-
-    gap:16px;
   }
 
   .brand{
@@ -936,6 +1328,8 @@ and no cropping.
   }
 
   .nav{
+    justify-content:flex-start;
+
     gap:
       14px
       20px;
@@ -945,18 +1339,20 @@ and no cropping.
     font-size:.71rem;
   }
 
+
+  /* HOMEPAGE */
+
   .hero{
-    width:
-      calc(100% - 48px);
+    width:calc(100% - 48px);
 
     grid-template-columns:1fr;
+
+    gap:36px;
 
     padding:
       42px
       0
       58px;
-
-    gap:36px;
   }
 
   .hero-copy{
@@ -982,18 +1378,11 @@ and no cropping.
     object-fit:contain;
   }
 
-  .footer{
-    padding:
-      18px
-      24px
-      28px;
 
-    display:block;
-  }
+  /* STANDARD PAGES */
 
   .inner{
-    width:
-      calc(100% - 48px);
+    width:calc(100% - 48px);
 
     padding:
       50px
@@ -1010,393 +1399,109 @@ and no cropping.
 
     gap:8px;
   }
-}
-/* =========================================================
-   RESEARCH PAGE
-   ========================================================= */
 
-.research-page{
-  width:min(calc(100% - 110px),1320px);
-  margin:0 auto;
-  padding:60px 0 100px;
-}
 
-
-/* INTRO */
-
-.research-intro{
-  max-width:900px;
-  margin-bottom:75px;
-}
-
-.research-heading{
-  margin:0;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:clamp(4.7rem,8vw,7.5rem);
-
-  font-weight:400;
-
-  line-height:.95;
-
-  letter-spacing:-.055em;
-
-  color:var(--charcoal);
-}
-
-.research-rule{
-  width:72px;
-  height:3px;
-
-  background:var(--gold);
-
-  margin:30px 0 38px;
-}
-
-.research-description{
-  margin:0;
-
-  max-width:760px;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:1.15rem;
-
-  line-height:1.75;
-
-  color:#4d4842;
-}
-
-
-/* =========================================================
-   SECTION TABS
-   ========================================================= */
-
-.research-tabs{
-  display:flex;
-
-  width:max-content;
-
-  max-width:100%;
-
-  margin-top:48px;
-
-  border:
-    1px
-    solid
-    #d9cfbf;
-
-  border-radius:8px;
-
-  overflow:hidden;
-
-  background:rgba(255,255,255,.18);
-}
-
-.research-tabs a{
-  display:block;
-
-  min-width:240px;
-
-  padding:16px 30px;
-
-  text-align:center;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:1.18rem;
-
-  text-decoration:none;
-
-  color:#716b64;
-
-  border-right:
-    1px
-    solid
-    #d9cfbf;
-
-  transition:
-    background .18s ease,
-    color .18s ease;
-}
-
-.research-tabs a:last-child{
-  border-right:none;
-}
-
-.research-tabs a:hover{
-  background:#f2e8d5;
-
-  color:var(--charcoal);
-}
-
-
-/* =========================================================
-   SECTIONS
-   ========================================================= */
-
-.research-section{
-  scroll-margin-top:130px;
-
-  margin-bottom:90px;
-}
-
-.section-heading{
-  margin:
-    0
-    0
-    28px;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:2rem;
-
-  font-weight:400;
-
-  color:var(--charcoal);
-}
-
-
-/* =========================================================
-   INDIVIDUAL RESEARCH ROW
-   ========================================================= */
-
-.research-row{
-  display:grid;
-
-  grid-template-columns:
-    125px
-    minmax(0,1fr)
-    130px;
-
-  gap:28px;
-
-  align-items:start;
-
-  padding:
-    27px
-    0
-    29px;
-
-  border-top:
-    1px
-    solid
-    #d7cdbd;
-}
-
-.research-row:last-child{
-  border-bottom:
-    1px
-    solid
-    #d7cdbd;
-}
-
-
-/* YEAR / STATUS */
-
-.research-year{
-  padding-top:5px;
-
-  font-size:.75rem;
-
-  line-height:1.45;
-
-  text-transform:uppercase;
-
-  letter-spacing:.11em;
-
-  color:#9a6d00;
-
-  font-weight:700;
-}
-
-
-/* PAPER INFORMATION */
-
-.research-content{
-  min-width:0;
-}
-
-.research-title{
-  margin:
-    0
-    0
-    6px;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:1.35rem;
-
-  font-weight:400;
-
-  line-height:1.38;
-
-  color:#44413d;
-}
-
-.research-authors{
-  margin:
-    0
-    0
-    4px;
-
-  font-size:.91rem;
-
-  line-height:1.55;
-
-  color:#514d48;
-}
-
-.research-meta{
-  margin:0;
-
-  font-size:.9rem;
-
-  color:#746e67;
-
-  line-height:1.55;
-}
-
-
-/* MANUSCRIPT LINK */
-
-.research-action{
-  text-align:right;
-
-  padding-top:5px;
-}
-
-.manuscript-link{
-  font-size:.72rem;
-
-  text-transform:uppercase;
-
-  letter-spacing:.13em;
-
-  text-decoration:none;
-
-  font-weight:700;
-
-  color:#9a6d00;
-
-  white-space:nowrap;
-}
-
-.manuscript-link:hover{
-  color:var(--charcoal);
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media(max-width:1000px){
-
-  .research-page{
-    width:min(calc(100% - 64px),1100px);
-  }
-
-  .research-row{
-    grid-template-columns:
-      110px
-      minmax(0,1fr)
-      120px;
-
-    gap:20px;
-  }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media(max-width:760px){
+  /* RESEARCH PAGE */
 
   .research-page{
     width:calc(100% - 48px);
 
     padding:
-      44px
+      42px
       0
       70px;
+  }
+
+  .research-intro{
+    margin-bottom:48px;
   }
 
   .research-heading{
     font-size:
       clamp(
-        3.8rem,
-        17vw,
-        5.6rem
+        3.7rem,
+        16vw,
+        5.3rem
       );
-  }
-
-  .research-intro{
-    margin-bottom:55px;
   }
 
   .research-tabs{
     width:100%;
 
-    flex-direction:column;
+    grid-template-columns:1fr;
   }
 
-  .research-tabs a{
-    width:100%;
-
-    min-width:0;
-
-    border-right:none;
+  .research-tab{
+    border-right:0;
 
     border-bottom:
       1px
       solid
-      #d9cfbf;
+      #d5c9b7;
   }
 
-  .research-tabs a:last-child{
-    border-bottom:none;
+  .research-tab:last-child{
+    border-bottom:0;
   }
 
-  .research-row{
+
+  /* PUBLICATIONS */
+
+  .publication-row{
+    grid-template-columns:1fr;
+
+    gap:6px;
+
+    padding:
+      23px
+      0;
+  }
+
+  .publication-year{
+    padding:0;
+
+    margin-bottom:2px;
+  }
+
+
+  /* WORKING PAPERS */
+
+  .working-row{
     grid-template-columns:1fr;
 
     gap:7px;
 
     padding:
       23px
-      0
-      25px;
+      0;
   }
 
-  .research-year{
-    padding:0;
+  .paper-action{
+    padding-top:6px;
 
-    margin-bottom:3px;
-  }
-
-  .research-action{
     text-align:left;
+  }
 
-    padding-top:5px;
+  .paper-title{
+    font-size:1.18rem;
+  }
+
+
+  /* FOOTER */
+
+  .footer{
+    display:block;
+
+    padding:
+      18px
+      24px
+      28px;
+  }
+
+  .footer span{
+    display:block;
+
+    margin-bottom:4px;
   }
 
 }
