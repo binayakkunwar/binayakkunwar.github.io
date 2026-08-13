@@ -31,7 +31,6 @@ html{
 
 body{
   margin:0;
-
   background:var(--cream);
   color:var(--ink);
 
@@ -255,7 +254,7 @@ a{
 }
 
 
-/* LARGE HOMEPAGE NAME */
+/* HOMEPAGE NAME */
 
 .hero h1{
   margin:0;
@@ -435,7 +434,6 @@ a{
 
 /* =========================================================
    HOMEPAGE PORTRAIT
-   NO CROPPING
    ========================================================= */
 
 .portrait-wrap{
@@ -958,7 +956,7 @@ a{
   grid-template-columns:
     repeat(2,minmax(220px,1fr));
 
-  width:min(700px,100%);
+  width:min(820px,100%);
 
   margin-top:48px;
 
@@ -981,9 +979,11 @@ a{
 
   margin:0;
 
+  min-height:72px;
+
   padding:
-    16px
-    28px;
+    18px
+    34px;
 
   background:transparent;
 
@@ -1003,7 +1003,7 @@ a{
     "Times New Roman",
     serif;
 
-  font-size:1.12rem;
+  font-size:1.32rem;
 
   font-weight:400;
 
@@ -1170,7 +1170,7 @@ a{
 
 
 /* =========================================================
-   MANUSCRIPT LINK
+   MANUSCRIPT LINKS
    ========================================================= */
 
 .paper-action{
@@ -1205,6 +1205,365 @@ a{
 
 
 /* =========================================================
+   OUTREACH PAGE
+   ========================================================= */
+
+.outreach-page{
+  width:min(
+    calc(100% - 110px),
+    1200px
+  );
+
+  margin:0 auto;
+
+  padding:
+    58px
+    0
+    100px;
+}
+
+
+/* =========================================================
+   OUTREACH INTRO
+   ========================================================= */
+
+.outreach-intro{
+  margin-bottom:66px;
+}
+
+.outreach-eyebrow{
+  margin:
+    0
+    0
+    28px;
+
+  color:var(--gold);
+
+  font-size:.72rem;
+
+  font-weight:700;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+}
+
+.outreach-heading{
+  margin:0;
+
+  color:var(--charcoal);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      4.4rem,
+      7vw,
+      6.8rem
+    );
+
+  font-weight:400;
+
+  line-height:.95;
+
+  letter-spacing:-.045em;
+}
+
+.outreach-rule{
+  width:70px;
+
+  height:3px;
+
+  margin:
+    31px
+    0
+    34px;
+
+  background:var(--gold);
+}
+
+.outreach-description{
+  max-width:780px;
+
+  margin:0;
+
+  color:#514c46;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.12rem;
+
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   OUTREACH TABS
+   ========================================================= */
+
+.outreach-tabs{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  width:min(820px,100%);
+
+  margin-top:48px;
+
+  overflow:hidden;
+
+  background:
+    rgba(255,255,255,.16);
+
+  border:
+    1px
+    solid
+    #d5c9b7;
+
+  border-radius:7px;
+}
+
+.outreach-tab{
+  appearance:none;
+  -webkit-appearance:none;
+
+  margin:0;
+
+  min-height:72px;
+
+  padding:
+    18px
+    30px;
+
+  background:transparent;
+
+  border:0;
+
+  border-right:
+    1px
+    solid
+    #d5c9b7;
+
+  color:#77716a;
+
+  cursor:pointer;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.32rem;
+
+  font-weight:400;
+
+  line-height:1.25;
+
+  transition:
+    background .18s ease,
+    color .18s ease;
+}
+
+.outreach-tab:last-child{
+  border-right:0;
+}
+
+.outreach-tab:hover{
+  color:var(--charcoal);
+
+  background:#f4ecdd;
+}
+
+.outreach-tab.active{
+  color:#8c6300;
+
+  background:#eee2c9;
+}
+
+
+/* =========================================================
+   OUTREACH PANELS
+   ========================================================= */
+
+.outreach-panel{
+  border-top:
+    1px
+    solid
+    #d7cdbd;
+}
+
+.outreach-panel[hidden]{
+  display:none;
+}
+
+
+/* =========================================================
+   OUTREACH ARTICLE / MEDIA ROWS
+   ========================================================= */
+
+.outreach-row,
+.media-row{
+  display:grid;
+
+  grid-template-columns:
+    105px
+    minmax(0,1fr)
+    140px;
+
+  gap:34px;
+
+  align-items:start;
+
+  padding:
+    28px
+    0
+    30px;
+
+  border-bottom:
+    1px
+    solid
+    #d7cdbd;
+}
+
+
+/* =========================================================
+   PRESENTATION ROWS
+   ========================================================= */
+
+.presentation-row{
+  display:grid;
+
+  grid-template-columns:
+    105px
+    minmax(0,1fr);
+
+  gap:34px;
+
+  align-items:start;
+
+  padding:
+    28px
+    0
+    30px;
+
+  border-bottom:
+    1px
+    solid
+    #d7cdbd;
+}
+
+
+/* =========================================================
+   OUTREACH YEAR
+   ========================================================= */
+
+.outreach-year{
+  padding-top:5px;
+
+  color:#9a6d00;
+
+  font-size:.75rem;
+
+  font-weight:700;
+
+  letter-spacing:.12em;
+}
+
+
+/* =========================================================
+   OUTREACH TEXT
+   ========================================================= */
+
+.outreach-content{
+  min-width:0;
+}
+
+.outreach-title{
+  margin:
+    0
+    0
+    7px;
+
+  color:#47433f;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:1.28rem;
+
+  font-weight:400;
+
+  line-height:1.4;
+}
+
+.outreach-meta{
+  margin:0;
+
+  color:#77716a;
+
+  font-size:.9rem;
+
+  line-height:1.55;
+}
+
+
+/* =========================================================
+   OUTREACH ACTION LINKS
+   ========================================================= */
+
+.outreach-action{
+  padding-top:5px;
+
+  text-align:right;
+}
+
+.media-actions{
+  padding-top:5px;
+
+  display:flex;
+
+  justify-content:flex-end;
+
+  flex-wrap:wrap;
+
+  gap:14px;
+}
+
+.outreach-link{
+  display:inline-block;
+
+  color:#9a6d00;
+
+  font-size:.71rem;
+
+  font-weight:700;
+
+  letter-spacing:.13em;
+
+  text-decoration:none;
+
+  text-transform:uppercase;
+
+  white-space:nowrap;
+
+  transition:color .18s ease;
+}
+
+.outreach-link:hover{
+  color:var(--charcoal);
+}
+
+
+/* =========================================================
    TABLET
    ========================================================= */
 
@@ -1223,6 +1582,9 @@ a{
   .header{
     padding-inline:34px;
   }
+
+
+  /* HOMEPAGE */
 
   .hero{
     width:min(
@@ -1256,6 +1618,9 @@ a{
     object-fit:contain;
   }
 
+
+  /* INNER */
+
   .inner{
     width:min(
       calc(100% - 64px),
@@ -1263,7 +1628,20 @@ a{
     );
   }
 
+
+  /* RESEARCH */
+
   .research-page{
+    width:min(
+      calc(100% - 70px),
+      1100px
+    );
+  }
+
+
+  /* OUTREACH */
+
+  .outreach-page{
     width:min(
       calc(100% - 70px),
       1100px
@@ -1284,7 +1662,7 @@ a{
   }
 
 
-  /* TOP STRIP ON MOBILE */
+  /* TOP STRIP */
 
   .rail{
     height:6px;
@@ -1401,7 +1779,9 @@ a{
   }
 
 
-  /* RESEARCH PAGE */
+  /* =======================================================
+     RESEARCH MOBILE
+     ======================================================= */
 
   .research-page{
     width:calc(100% - 48px);
@@ -1432,6 +1812,10 @@ a{
   }
 
   .research-tab{
+    min-height:60px;
+
+    font-size:1.15rem;
+
     border-right:0;
 
     border-bottom:
@@ -1487,389 +1871,9 @@ a{
   }
 
 
-  /* FOOTER */
-
-  .footer{
-    display:block;
-
-    padding:
-      18px
-      24px
-      28px;
-  }
-
-  .footer span{
-    display:block;
-
-    margin-bottom:4px;
-  }
-
-}
-/* =========================================================
-   OUTREACH PAGE
-   ========================================================= */
-
-.outreach-page{
-  width:min(
-    calc(100% - 110px),
-    1200px
-  );
-
-  margin:0 auto;
-
-  padding:
-    58px
-    0
-    100px;
-}
-
-
-/* INTRO */
-
-.outreach-intro{
-  margin-bottom:66px;
-}
-
-.outreach-eyebrow{
-  margin:
-    0
-    0
-    28px;
-
-  color:var(--gold);
-
-  font-size:.72rem;
-
-  font-weight:700;
-
-  letter-spacing:.18em;
-
-  text-transform:uppercase;
-}
-
-.outreach-heading{
-  margin:0;
-
-  color:var(--charcoal);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    clamp(
-      4.4rem,
-      7vw,
-      6.8rem
-    );
-
-  font-weight:400;
-
-  line-height:.95;
-
-  letter-spacing:-.045em;
-}
-
-.outreach-rule{
-  width:70px;
-  height:3px;
-
-  margin:
-    31px
-    0
-    34px;
-
-  background:var(--gold);
-}
-
-.outreach-description{
-  max-width:780px;
-
-  margin:0;
-
-  color:#514c46;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:1.12rem;
-
-  line-height:1.7;
-}
-
-
-/* =========================================================
-   OUTREACH TABS
-   ========================================================= */
-
-.outreach-tabs{
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  width:min(820px,100%);
-
-  margin-top:48px;
-
-  overflow:hidden;
-
-  background:
-    rgba(255,255,255,.16);
-
-  border:
-    1px
-    solid
-    #d5c9b7;
-
-  border-radius:7px;
-}
-
-.outreach-tab{
-  appearance:none;
-  -webkit-appearance:none;
-
-  margin:0;
-
-  padding:
-    17px
-    30px;
-
-  background:transparent;
-
-  border:0;
-
-  border-right:
-    1px
-    solid
-    #d5c9b7;
-
-  color:#77716a;
-
-  cursor:pointer;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:1.12rem;
-
-  line-height:1.25;
-
-  transition:
-    background .18s ease,
-    color .18s ease;
-}
-
-.outreach-tab:last-child{
-  border-right:0;
-}
-
-.outreach-tab:hover{
-  color:var(--charcoal);
-
-  background:#f4ecdd;
-}
-
-.outreach-tab.active{
-  color:#8c6300;
-
-  background:#eee2c9;
-}
-
-
-/* =========================================================
-   PANELS
-   ========================================================= */
-
-.outreach-panel{
-  border-top:
-    1px
-    solid
-    #d7cdbd;
-}
-
-.outreach-panel[hidden]{
-  display:none;
-}
-
-
-/* =========================================================
-   ARTICLE / MEDIA ROWS
-   ========================================================= */
-
-.outreach-row,
-.media-row{
-  display:grid;
-
-  grid-template-columns:
-    105px
-    minmax(0,1fr)
-    140px;
-
-  gap:34px;
-
-  align-items:start;
-
-  padding:
-    28px
-    0
-    30px;
-
-  border-bottom:
-    1px
-    solid
-    #d7cdbd;
-}
-
-
-/* PRESENTATIONS HAVE NO ACTION COLUMN */
-
-.presentation-row{
-  display:grid;
-
-  grid-template-columns:
-    105px
-    minmax(0,1fr);
-
-  gap:34px;
-
-  align-items:start;
-
-  padding:
-    28px
-    0
-    30px;
-
-  border-bottom:
-    1px
-    solid
-    #d7cdbd;
-}
-
-
-/* YEAR */
-
-.outreach-year{
-  padding-top:5px;
-
-  color:#9a6d00;
-
-  font-size:.75rem;
-
-  font-weight:700;
-
-  letter-spacing:.12em;
-}
-
-
-/* TEXT */
-
-.outreach-content{
-  min-width:0;
-}
-
-.outreach-title{
-  margin:
-    0
-    0
-    7px;
-
-  color:#47433f;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:1.28rem;
-
-  font-weight:400;
-
-  line-height:1.4;
-}
-
-.outreach-meta{
-  margin:0;
-
-  color:#77716a;
-
-  font-size:.9rem;
-
-  line-height:1.55;
-}
-
-
-/* =========================================================
-   ACTION LINKS
-   ========================================================= */
-
-.outreach-action{
-  padding-top:5px;
-
-  text-align:right;
-}
-
-.media-actions{
-  padding-top:5px;
-
-  display:flex;
-
-  justify-content:flex-end;
-
-  gap:18px;
-}
-
-.outreach-link{
-  display:inline-block;
-
-  color:#9a6d00;
-
-  font-size:.71rem;
-
-  font-weight:700;
-
-  letter-spacing:.13em;
-
-  text-decoration:none;
-
-  text-transform:uppercase;
-
-  white-space:nowrap;
-
-  transition:color .18s ease;
-}
-
-.outreach-link:hover{
-  color:var(--charcoal);
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media(max-width:1000px){
-
-  .outreach-page{
-    width:min(
-      calc(100% - 70px),
-      1100px
-    );
-  }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media(max-width:760px){
+  /* =======================================================
+     OUTREACH MOBILE
+     ======================================================= */
 
   .outreach-page{
     width:calc(100% - 48px);
@@ -1900,6 +1904,10 @@ a{
   }
 
   .outreach-tab{
+    min-height:60px;
+
+    font-size:1.15rem;
+
     border-right:0;
 
     border-bottom:
@@ -1911,6 +1919,9 @@ a{
   .outreach-tab:last-child{
     border-bottom:0;
   }
+
+
+  /* OUTREACH ROWS */
 
   .outreach-row,
   .presentation-row,
@@ -1944,6 +1955,24 @@ a{
 
   .outreach-title{
     font-size:1.18rem;
+  }
+
+
+  /* FOOTER */
+
+  .footer{
+    display:block;
+
+    padding:
+      18px
+      24px
+      28px;
+  }
+
+  .footer span{
+    display:block;
+
+    margin-bottom:4px;
   }
 
 }
